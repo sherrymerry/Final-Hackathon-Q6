@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chatbot Internee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            color: white;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/logo.webp');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        .chatbot-container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .chatbot-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        @media (max-width: 600px) {
+            .chatbot-container {
+                width: 90%;
+                padding: 10px;
+            }
+            .chatbot-container h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="background-image"></div>
+    <div class="chatbot-container">
+        <h1>Welcome to Internee.pk Chatbot</h1>
+    </div>
     <script type="text/javascript">
         (function(d, m){
             var kommunicateSettings = 
@@ -16,7 +66,6 @@
             var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
             window.kommunicate = m; m._globals = kommunicateSettings;
         })(document, window.kommunicate || {});
-    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
     </script>
 </body>
 </html>
